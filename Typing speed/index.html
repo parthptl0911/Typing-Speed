@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test - Custom Cursor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Typing Speed Test</h1>
+            <div class="stats">
+                <div class="stat">
+                    <span class="label">WPM:</span>
+                    <span id="wpm" class="value">0</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Accuracy:</span>
+                    <span id="accuracy" class="value">100%</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Time:</span>
+                    <span id="time" class="value">60s</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="typing-area">
+            <div class="text-display" id="textDisplay">
+                <!-- Text will be populated by JavaScript -->
+            </div>
+            <div class="input-container">
+                <textarea 
+                    id="textInput" 
+                    placeholder="Start typing here..."
+                    spellcheck="false"
+                    autocomplete="off"
+                    autocorrect="off"
+                    autocapitalize="off"
+                ></textarea>
+                <div class="custom-cursor" id="customCursor"></div>
+                <div class="hint-message" id="hintMessage">Click <b>Start Test</b> to begin tracking your speed and accuracy!</div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="startBtn" class="btn primary">Start Test</button>
+            <button id="resetBtn" class="btn secondary">Reset</button>
+        </div>
+
+        <div class="results" id="results" style="display: none;">
+            <h2>🎉 Test Complete!</h2>
+            <div class="result-stats">
+                <div class="result-stat">
+                    <span class="result-label">Words Per Minute:</span>
+                    <span id="finalWpm" class="result-value">0</span>
+                </div>
+                <div class="result-stat">
+                    <span class="result-label">Accuracy:</span>
+                    <span id="finalAccuracy" class="result-value">100%</span>
+                </div>
+                <div class="result-stat">
+                    <span class="result-label">Characters Typed:</span>
+                    <span id="charactersTyped" class="result-value">0</span>
+                </div>
+                <div class="result-stat">
+                    <span class="result-label">Errors:</span>
+                    <span id="errors" class="result-value">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
